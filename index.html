@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Girly Boutique</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">Girly Boutique</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Elegant Girls Fashion</h1>
+<p>New Trend Collections</p>
+<button onclick="document.getElementById('products').scrollIntoView();">
+Shop Now
+</button>
+</section>
+
+<section class="products" id="products">
+<h2>Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="images/floral.avif">
+<h3>Floral Dress</h3>
+<p>₹1299</p>
+<button onclick="addToCart('Floral Dress',1299)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/handbag.avif">
+<h3>Pink Handbag</h3>
+<p>₹999</p>
+<button onclick="addToCart('Pink Handbag',999)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/top.avif">
+<h3>Casual Top</h3>
+<p>₹799</p>
+<button onclick="addToCart('Casual Top',799)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/sarees.avif">
+<h3>Designer Saree</h3>
+<p>₹1999</p>
+<button onclick="addToCart('Designer Saree',1999)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/kurti.avif">
+<h3>Kurti Set</h3>
+<p>₹1499</p>
+<button onclick="addToCart('Kurti Set',1499)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/gown.avif">
+<h3>Party Gown</h3>
+<p>₹2499</p>
+<button onclick="addToCart('Party Gown',2499)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/heels.avif">
+<h3>Fashion Heels</h3>
+<p>₹1199</p>
+<button onclick="addToCart('Fashion Heels',1199)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/jewel.avif">
+<h3>Jewellery Set</h3>
+<p>₹899</p>
+<button onclick="addToCart('Jewellery Set',899)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="images/makeup.avif">
+<h3>Makeup Product</h3>
+<p>₹700</p>
+<button onclick="addToCart('Makeup Product',700)">Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>About Us</h2>
+<p>
+We provide trendy boutique collections for women with quality and style.
+</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Send</button>
+</form>
+
+</section>
+
+
+<div class="cart-popup" id="cart">
+<h2>Your Cart</h2>
+<div id="cart-items"></div>
+
+<h3>Total ₹<span id="total">0</span></h3>
+
+<button onclick="showPayment()">Checkout</button>
+<button onclick="closeCart()">Close</button>
+</div>
+
+
+<div class="payment-page" id="payment">
+<h2>Payment Page</h2>
+
+<input type="text" placeholder="Card Name">
+<input type="text" placeholder="Card Number">
+<input type="text" placeholder="Expiry">
+
+<button onclick="placeOrder()">Pay Now</button>
+</div>
+
+
+<div class="order-page" id="order">
+<h1>Order Successful 🎉</h1>
+<p>Thanks For Shopping</p>
+</div>
+
+<footer>
+<p>©2026 Girly Boutique</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
